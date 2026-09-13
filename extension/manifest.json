@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CoCo for Zhihu",
+  "version": "0.1.0",
+  "description": "在知乎网页中进行 CoCo 兴趣探索与内容推荐。",
+  "permissions": ["storage"],
+  "host_permissions": ["http://localhost:8787/*", "https://www.zhihu.com/*", "https://zhuanlan.zhihu.com/*"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{"matches": ["https://www.zhihu.com/*", "https://zhuanlan.zhihu.com/*"], "js": ["content.js"], "css": ["content.css"], "run_at": "document_idle"}],
+  "action": {"default_title": "打开 CoCo"}
+}
