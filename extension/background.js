@@ -1,4 +1,4 @@
-const API = 'https://YOUR_PUBLIC_BACKEND.example.com';
+const API = 'https://coco-zhihu-api.onrender.com';
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'coco-next') {
     fetch(`${API}/api/next`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(message.payload)})
